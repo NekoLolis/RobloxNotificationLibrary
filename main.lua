@@ -73,7 +73,7 @@ function library:CreateNotification(title, body, typeOf)
 	errorr.Size = UDim2.new(0.083, 0,0.235, 0)
 	errorr.Visible = false
 	errorr.Image = "rbxassetid://2777727756"
-	errorr.ImageColor3 = Color3.fromRGB(255, 2, 6)
+	errorr.ImageColor3 = Color3.fromRGB(255, 255, 255)
 	errorr.ScaleType = Enum.ScaleType.Fit
 
 	success.Name = "success"
