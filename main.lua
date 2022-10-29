@@ -1,7 +1,4 @@
 local library = {}
-local TS = game:GetService("TweenService")
-local tweeninfo = TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
-local tweeninfo2 = TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
