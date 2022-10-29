@@ -1,5 +1,7 @@
 local library = {}
 local TS = game:GetService("TweenService")
+local tweeninfo = TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+local tweeninfo2 = TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
@@ -10,6 +12,10 @@ function animateOpenClose()
 end
 
 function library:CreateNotification(title, body, typeOf)
+	if game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis") then
+		game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis"):Destroy()
+	end
+	
 	local NekoLolis = Instance.new("ScreenGui")
 	local Notification = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
