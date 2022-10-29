@@ -1,10 +1,12 @@
 local library = {}
+local types = {"error", "success", "info"}
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
 	frame:TweenPosition(UDim2.new(0.774, 0,0.778, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 1.5)
-	wait(2.5)
+	wait(5)
 	frame:TweenPosition(UDim2.new(1.1, 0,0.778, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 1.5)
+	wait(1.6)
 	game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis"):Destroy()
 end
 
@@ -91,22 +93,11 @@ function library:CreateNotification(title, body, typeOf)
 	info.Image = "rbxassetid://2790676563"
 	info.ScaleType = Enum.ScaleType.Fit
 	
-	if typeOf == "error" then
-		errorr.Visible = true
-		game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
-		animateOpenClose()
+	if not table.find(types, typeOf) then
+		print("Invalid Type For Notification")
 	else
-		if typeOf == "success" then
-			success.Visible = true
-			game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
-			animateOpenClose()
-		else
-			if typeOf == "info" then
-				info.Visible = true
-				game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
-				animateOpenClose()
-			end
-		end
+		Images:FindFirstChild(typeOf).Visible = true
+		animateOpenClose()
 	end
 	
 	return library
