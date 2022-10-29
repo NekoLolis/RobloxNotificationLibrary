@@ -92,13 +92,13 @@ function library:CreateNotification(title, body, typeOf)
 	info.ScaleType = Enum.ScaleType.Fit
 	
 	if typeOf == "error" then
-		errorr.Transparency = 0
+		game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.error.Transparency = 0
 	else
 		if typeOf == "info" then
-			info.Transparency = 0
+			game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.info.Transparency = 0
 		else
 			if typeOf == "success" then
-				success.Transparency = 0
+				game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.success.Transparency = 0
 			end
 		end
 	end
