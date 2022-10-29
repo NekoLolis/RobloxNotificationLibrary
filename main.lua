@@ -102,3 +102,5 @@ function library:CreateNotification(title, body, typeOf)
 	
 	return library
 end
+
+return library
