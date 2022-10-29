@@ -49,6 +49,7 @@ function library:CreateNotification(title, body, typeOf)
 	BodyText.Font = Enum.Font.SourceSansBold
 	BodyText.TextColor3 = Color3.fromRGB(213, 213, 213)
 	BodyText.TextSize = 33.000
+	BodyText.Text = body
 
 	TitleText.Name = "TitleText"
 	TitleText.Parent = Notification
@@ -59,6 +60,7 @@ function library:CreateNotification(title, body, typeOf)
 	TitleText.Font = Enum.Font.SourceSansBold
 	TitleText.TextColor3 = Color3.fromRGB(213, 213, 213)
 	TitleText.TextSize = 26.000
+	TitleText.Text = title
 
 	Images.Name = "Images"
 	Images.Parent = Notification
