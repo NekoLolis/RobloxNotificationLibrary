@@ -5,9 +5,9 @@ local tweeninfo2 = TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirect
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
-	TS:Create(frame, tweeninfo, {Position = UDim2.new(0.774, 0,0.778, 0)}):Play()
-	wait(5)
-	TS:Create(frame, tweeninfo2, {Position = UDim2.new(1.1, 0,0.778, 0)}):Play()
+	frame:TweenPosition(UDim2.new(0.774, 0,0.778, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 1.5)
+	wait(2.5)
+	frame:TweenPosition(UDim2.new(1.1, 0,0.778, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, 1.5)
 	game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis"):Destroy()
 end
 
