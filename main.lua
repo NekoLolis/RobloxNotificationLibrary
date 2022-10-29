@@ -1,4 +1,6 @@
 local library = {}
+local TS = game:GetService("TweenService")
+local types = {"success", "error", "info"}
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
@@ -91,19 +93,12 @@ function library:CreateNotification(title, body, typeOf)
 	info.Image = "rbxassetid://2790676563"
 	info.ScaleType = Enum.ScaleType.Fit
 	
-	if typeOf == "error" then
-		game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.error.Transparency = 0
+	if not table.find(types, typeOf) then
+		print("Invalid Type For Notification")
 	else
-		if typeOf == "info" then
-			game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.info.Transparency = 0
-		else
-			if typeOf == "success" then
-				game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification.Images.success.Transparency = 0
-			end
-		end
+		game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
+		animateOpenClose()
 	end
-	
-	animateOpenClose()
 	
 	return library
 end
