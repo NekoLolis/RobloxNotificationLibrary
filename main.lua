@@ -99,4 +99,6 @@ function library:CreateNotification(title, body, typeOf)
 	end
 	
 	animateOpenClose()
+	
+	return library
 end
