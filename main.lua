@@ -60,6 +60,7 @@ function library:CreateNotification(title, body, typeOf)
 	TitleText.Font = Enum.Font.SourceSansBold
 	TitleText.TextColor3 = Color3.fromRGB(213, 213, 213)
 	TitleText.TextSize = 26.000
+	TitleText.TextScaled = true
 	TitleText.Text = title
 
 	Images.Name = "Images"
