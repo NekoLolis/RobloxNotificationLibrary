@@ -1,6 +1,4 @@
 local library = {}
-local TS = game:GetService("TweenService")
-local types = {"success", "error", "info"}
 
 function animateOpenClose()
 	local frame = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("NekoLolis").Notification
@@ -33,7 +31,7 @@ function library:CreateNotification(title, body, typeOf)
 	Notification.Parent = NekoLolis
 	Notification.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 	Notification.BorderSizePixel = 0
-	Notification.Position = UDim2.new(0.774011314, 0, 0.777777791, 0)
+	Notification.Position = UDim2.new(1.1, 0,0.778, 0)
 	Notification.Size = UDim2.new(0.225181594, 0, 0.168128654, 0)
 
 	UICorner.CornerRadius = UDim.new(0.0500000007, 0)
@@ -93,11 +91,22 @@ function library:CreateNotification(title, body, typeOf)
 	info.Image = "rbxassetid://2790676563"
 	info.ScaleType = Enum.ScaleType.Fit
 	
-	if not table.find(types, typeOf) then
-		print("Invalid Type For Notification")
-	else
+	if typeOf == "error" then
+		errorr.Visible = true
 		game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
 		animateOpenClose()
+	else
+		if typeOf == "success" then
+			success.Visible = true
+			game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
+			animateOpenClose()
+		else
+			if typeOf == "info" then
+				info.Visible = true
+				game:GetService("Players").PlayerGui:FindFirstChild("NekoLolis").Notification.Images:FindFirstChild(typeOf).Visible = true
+				animateOpenClose()
+			end
+		end
 	end
 	
 	return library
