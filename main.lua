@@ -69,8 +69,8 @@ function library:CreateNotification(title, body, typeOf)
 	errorr.Parent = Images
 	errorr.BackgroundTransparency = 1.000
 	errorr.BorderSizePixel = 0
-	errorr.Position = UDim2.new(0.0322580636, 0, 0.0517241396, 0)
-	errorr.Size = UDim2.new(0.129032254, 0, 0.313043475, 0)
+	errorr.Position = UDim2.new(0.032, 0,0.052, 0)
+	errorr.Size = UDim2.new(0.083, 0,0.235, 0)
 	errorr.Visible = false
 	errorr.Image = "rbxassetid://2777727756"
 	errorr.ImageColor3 = Color3.fromRGB(255, 2, 6)
@@ -79,8 +79,8 @@ function library:CreateNotification(title, body, typeOf)
 	success.Name = "success"
 	success.Parent = Images
 	success.BackgroundTransparency = 1.000
-	success.Position = UDim2.new(0.0320000015, 0, 0.0520000011, 0)
-	success.Size = UDim2.new(0.129032254, 0, 0.313043475, 0)
+	success.Position = UDim2.new(0.032, 0,0.052, 0)
+	success.Size = UDim2.new(0.09, 0,0.174, 0)
 	success.Visible = false
 	success.Image = "rbxassetid://2790552399"
 	success.ScaleType = Enum.ScaleType.Fit
@@ -88,8 +88,8 @@ function library:CreateNotification(title, body, typeOf)
 	info.Name = "info"
 	info.Parent = Images
 	info.BackgroundTransparency = 1.000
-	info.Position = UDim2.new(0.0320000015, 0, 0.0520000011, 0)
-	info.Size = UDim2.new(0.129032254, 0, 0.313043475, 0)
+	info.Position = UDim2.new(0.028, 0,0.052, 0)
+	info.Size = UDim2.new(0.093, 0,0.174, 0)
 	info.Visible = false
 	info.Image = "rbxassetid://2790676563"
 	info.ScaleType = Enum.ScaleType.Fit
