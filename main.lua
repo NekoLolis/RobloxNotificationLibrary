@@ -43,11 +43,12 @@ function library:CreateNotification(title, body, typeOf)
 	BodyText.Parent = Notification
 	BodyText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	BodyText.BackgroundTransparency = 1.000
-	BodyText.Position = UDim2.new(0.268817216, 0, 0.356521726, 0)
+	BodyText.Position = UDim2.new(0.031, 0,0.226, 0)
 	BodyText.Size = UDim2.new(0.945, 0,0.687, 0)
 	BodyText.Font = Enum.Font.SourceSansBold
 	BodyText.TextColor3 = Color3.fromRGB(213, 213, 213)
 	BodyText.TextSize = 33.000
+	BodyText.TextScaled = true
 	BodyText.Text = body
 
 	TitleText.Name = "TitleText"
