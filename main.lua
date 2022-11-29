@@ -87,7 +87,7 @@ function library:CreateNotification(title, body, typeOf)
 	info.ScaleType = Enum.ScaleType.Fit
 	
 	if not table.find(types, typeOf) then
-		print("Invalid Type For Notification")
+		print("Invalid Type For Notification [info, error, success]")
 	else
 		Images:FindFirstChild(typeOf).Visible = true
 		spawn(function()
